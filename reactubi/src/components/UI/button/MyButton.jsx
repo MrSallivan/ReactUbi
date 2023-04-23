@@ -2,10 +2,10 @@ import React from "react"
 import classes from './MyButton.module.css'
 
 
-const MyButton = () => {
+const MyButton = ({ children, ...props }) => {
 
 	return (
-		<button className={classes.myBtn}>Create post</button>
+		<button {...props} className={classes.myBtn}>{children}</button>
 
 	)
 }

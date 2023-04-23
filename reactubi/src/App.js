@@ -4,6 +4,7 @@ import Counter from './components/Counter'
 import PostItem from './components/PostItem';
 import PostList from './components/PostList';
 import MyButton from './components/UI/button/MyButton';
+import MyInput from './components/UI/input/MyInput';
 import './styles/App.css'
 
 function App() {
@@ -15,13 +16,16 @@ function App() {
 		{ id: 5, title: 'JavaScript', body: 'JavaScript - this is programming Language' },
 	])
 
+function addNewPost(){
+	
+}
 
 	return (
 		<div className='App'>
 			<form>
-				<input type='text' placeholder='Name post' />
-				<input type='text' placeholder='Description post' />
-				<MyButton>Button text</MyButton>
+				<MyInput  tepy='text' placeholder='Input post title'/>
+				<MyInput  tepy='text' placeholder='Input post description'/>
+				<MyButton onClick={addNewPost}>Creat post</MyButton>
 			</form>
 			<PostList posts={posts} title={'Post List from props'} />
 
